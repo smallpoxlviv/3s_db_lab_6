@@ -74,7 +74,13 @@
             <version>${micrometer.version}</version>
         </dependency>
 
-        
+
+	<!-- springdoc-openapi-ui (cloud_tecnologies course) -->
+		<dependency>
+    		<groupId>org.springdoc</groupId>
+    		<artifactId>springdoc-openapi-ui</artifactId>
+    		<version>1.5.2</version>
+		</dependency>     
 
     </dependencies>
 
@@ -86,5 +92,17 @@
             </plugin>
         </plugins>
     </build>
-
+    
+    
+    <!-- added application-prod.properties (cloud_tecnologies course)-->
+    <profiles>
+    	<profile>
+    		<id>prod</id>
+    		<properties>
+    			<spring.profiles.active>prod</spring.profiles.active>
+    		</properties>
+    	</profile>
+    </profiles>
+    	
+    	
 </project>
